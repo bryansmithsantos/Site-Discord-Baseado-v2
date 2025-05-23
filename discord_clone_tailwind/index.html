@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodexLine Hub</title>
+    <link href="./public/output.css" rel="stylesheet">
+</head>
+<body class="flex h-screen bg-black text-white overflow-hidden">
+
+  <!-- Server List (Leftmost column) -->
+  <div class="w-16 bg-gray-900 p-3 space-y-3 flex flex-col items-center">
+    <!-- Placeholder for server icons -->
+    <div class="bg-gray-700 h-10 w-10 rounded-3xl flex items-center justify-center cursor-pointer hover:rounded-xl hover:bg-gray-600 transition-all duration-150 ease-in-out">S1</div>
+    <div class="bg-gray-700 h-10 w-10 rounded-3xl flex items-center justify-center cursor-pointer hover:rounded-xl hover:bg-gray-600 transition-all duration-150 ease-in-out">S2</div>
+    <div class="bg-gray-800 h-10 w-10 rounded-3xl flex items-center justify-center cursor-pointer hover:rounded-xl hover:bg-gray-700 transition-all duration-150 ease-in-out">
+      <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+    </div>
+  </div>
+
+  <!-- Channel List & User Panel (Middle column) -->
+  <div class="w-60 bg-gray-850 flex flex-col"> {/* Slightly different shade from server list for separation if needed, or make it same as server list bg-gray-900*/}
+    <!-- Server Name Header -->
+    <div class="h-12 shadow-md px-3 flex items-center border-b border-gray-700"> {/* Added border for definition */}
+      <h2 class="text-md font-semibold text-white">CodexLine Hub</h2>
+    </div>
+    <!-- Channel List -->
+    <div class="flex-1 p-3 space-y-2 overflow-y-auto">
+      <div class="text-gray-400 hover:text-gray-100 hover:bg-gray-750 p-1 rounded cursor-pointer"># general</div> {/* hover:bg-gray-750 for subtle change */}
+      <div class="text-gray-400 hover:text-gray-100 hover:bg-gray-750 p-1 rounded cursor-pointer"># updates</div>
+      <div class="text-gray-400 hover:text-gray-100 hover:bg-gray-750 p-1 rounded cursor-pointer"># feedback</div>
+      <div class="text-gray-400 hover:text-gray-100 hover:bg-gray-750 p-1 rounded cursor-pointer"># lounge</div>
+    </div>
+    <!-- User Panel (at the bottom of this column) -->
+    <div class="h-14 bg-gray-900 p-2 flex items-center justify-between border-t border-gray-700"> {/* Matched server list bg, added border */}
+      <div class="flex items-center">
+        <div class="w-8 h-8 rounded-full bg-gray-600 mr-2 flex items-center justify-center">U</div>
+        <span class="text-sm font-medium text-gray-200">Username</span>
+      </div>
+      {/* Placeholder for icons like mic, headphones, settings */}
+      <div class="flex space-x-1">
+        <div class="w-5 h-5 bg-gray-700 rounded opacity-50"></div> {/* Using opacity for placeholder icons */}
+        <div class="w-5 h-5 bg-gray-700 rounded opacity-50"></div>
+        <div class="w-5 h-5 bg-gray-700 rounded opacity-50"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Chat Area (Rightmost column) -->
+  <div class="flex-1 bg-gray-800 flex flex-col"> {/* Darker main area */}
+    <!-- Channel Header -->
+    <div class="h-12 shadow-md px-3 flex items-center border-b border-gray-700">  {/* Added border for definition */}
+      <h3 class="text-lg font-semibold text-white"># general</h3>
+    </div>
+    <!-- Chat Messages (takes up most space) -->
+    <div class="flex-1 p-3 space-y-3 overflow-y-auto">
+      <!-- Placeholder messages -->
+      <div class="flex items-start">
+        <div class="w-8 h-8 rounded-full bg-gray-600 mr-2 flex-shrink-0 flex items-center justify-center">U1</div>
+        <div>
+          <span class="font-semibold text-sm text-gray-200">User1</span>
+          <span class="text-gray-500 text-xs ml-1">10:00 AM</span> {/* Darker timestamp */}
+          <p class="text-gray-300">Hello! This is a placeholder message in monochrome.</p> {/* Lighter message text */}
+        </div>
+      </div>
+      <div class="flex items-start">
+        <div class="w-8 h-8 rounded-full bg-gray-600 mr-2 flex-shrink-0 flex items-center justify-center">U2</div>
+        <div>
+          <span class="font-semibold text-sm text-gray-200">User2</span>
+          <span class="text-gray-500 text-xs ml-1">10:01 AM</span>
+          <p class="text-gray-300">Hi there! Another message here to fill some space and see how it looks with multiple lines of text wrapping around, now in shades of gray.</p>
+        </div>
+      </div>
+       <div class="flex items-start">
+        <div class="w-8 h-8 rounded-full bg-gray-600 mr-2 flex-shrink-0 flex items-center justify-center">U3</div>
+        <div>
+          <span class="font-semibold text-sm text-gray-200">User3</span>
+          <span class="text-gray-500 text-xs ml-1">10:02 AM</span>
+          <p class="text-gray-300">Testing 1, 2, 3 in the new monochrome theme.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Message Input Box -->
+    <div class="h-16 p-3 bg-gray-800 border-t border-gray-700"> {/* Matched main area bg, added border */}
+      <input type="text" placeholder="Message #general" class="w-full p-2.5 rounded-lg bg-gray-700 placeholder-gray-500 text-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-500"> {/* Adjusted input colors and focus ring */}
+    </div>
+  </div>
+
+</body>
+</html>
